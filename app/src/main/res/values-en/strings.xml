@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="text_hello">Hello world !</string>
+    <string name="click_me">Click me !</string>
+    <string name="image_description">This is your profile picture</string>
+</resources>
