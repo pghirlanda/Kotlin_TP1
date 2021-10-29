@@ -4,36 +4,31 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import fr.estia.net.ghirlanda.p.activities.databinding.ComputeActivityBinding
 
 class ComputeActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
-    private lateinit var champ1: EditText
-    private lateinit var champ2: EditText
-    private lateinit var resultat: TextView
-    private lateinit var btn: Button
+    private lateinit var binding: ComputeActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.compute_activity)
-
-        champ1 = findViewById(R.id.field_1)
-        champ2 = findViewById(R.id.field_2)
-        resultat = findViewById(R.id.resultat)
-        btn = findViewById(R.id.btn_calculer)
-        btn.setOnClickListener(this)
-        btn.isEnabled = false
-
-        champ1.addTextChangedListener(this)
-        champ2.addTextChangedListener(this)
+        binding = ComputeActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        with(binding) {
+            btnCalculer.setOnClickListener(this@ComputeActivity)
+            field1.addTextChangedListener(this@ComputeActivity)
+            field2.addTextChangedListener(this@ComputeActivity)
+            btnCalculer.isEnabled = false
+        }
     }
 
     override fun onClick(v: View?) {
-        if (champ1.text.isNotBlank() && champ2.text.isNotBlank()) {
-            resultat.text =
-                (champ1.text.toString().toDouble() + champ2.text.toString().toDouble()).toString()
+        if (binding.field1.text.isNotBlank() && binding.field2.text.isNotBlank()) {
+            binding.resultat.text =
+                (
+                    binding.field1.text.toString().toDouble() + binding.field2.text.toString()
+                        .toDouble()
+                    ).toString()
         }
     }
 
@@ -44,6 +39,7 @@ class ComputeActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     }
 
     override fun afterTextChanged(s: Editable?) {
-        btn.isEnabled = champ1.text.isNotBlank() && champ2.text.isNotBlank()
+        binding.btnCalculer.isEnabled =
+            binding.field1.text.isNotBlank() && binding.field2.text.isNotBlank()
     }
 }
