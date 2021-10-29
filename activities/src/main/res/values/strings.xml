@@ -5,4 +5,5 @@
     <string name="calculer">Calculer</string>
     <string name="faire_un_calcul">Faire un calcul</string>
     <string name="cliquez_moi">Cliquez moi</string>
+    <string name="you_click">Vous avez cliqué %d fois</string>
 </resources>
