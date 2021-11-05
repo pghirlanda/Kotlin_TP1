@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Neighbors</string>
+    <string name="hint_image">Picture</string>
+    <string name="hint_nom">Name</string>
+    <string name="hint_telephone">Phone number</string>
+    <string name="hint_website">Website</string>
+    <string name="hint_address">Adress</string>
+    <string name="hint_moi">About me</string>
+    <string name="enregistrer">Save</string>
+    <string name="photo_de_profil">Profil picture</string>
+    <string name="bouton_enregistrer">Save button</string>
+    <string name="toolbar_liste" id="1">Neighbors list</string>
+    <string name="toolbar_add" id="2">New neighbor</string>
+    <string name="longueur_tel">The phone number must have 10 characters</string>
+    <string name="forme_numero">The telephone number must be in the following format 0X XX XX XX XX</string>
+    <string name="lien_valide">Enter a valid link</string>
+    <string name="entrer_nom">Enter your name</string>
+    <string name="ajout_voisin">Add neighbor</string>
+    <string name="supprimer_un_voisin">Delete neighbor</string>
+</resources>

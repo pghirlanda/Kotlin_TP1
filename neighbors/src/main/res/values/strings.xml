@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Neighbors</string>
+    <string name="hint_image">Image</string>
+    <string name="hint_nom">Nom</string>
+    <string name="hint_telephone">Télephone</string>
+    <string name="hint_website">Website</string>
+    <string name="hint_address">Adresse</string>
+    <string name="hint_moi">A propos de moi</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="photo_de_profil">Photo de profil</string>
+    <string name="bouton_enregistrer">Bouton enregistrer</string>
+    <string name="toolbar_liste" id="1">Liste des voisins</string>
+    <string name="toolbar_add" id="2">Nouveau voisin</string>
+    <string name="longueur_tel">Le numéro de téléphone doit avoir 10 caractères</string>
+    <string name="forme_numero">Le numéro de téléphone doit être sous la forme suivante 0X XX XX XX XX</string>
+    <string name="lien_valide">Entrer un lien valide</string>
+    <string name="entrer_nom">Entrer votre nom</string>
+    <string name="ajout_voisin">Ajout voisin</string>
+    <string name="supprimer_un_voisin">Supprimer un voisin</string>
+</resources>
