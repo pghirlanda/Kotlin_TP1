@@ -17,4 +17,8 @@
     <string name="entrer_nom">Entrer votre nom</string>
     <string name="ajout_voisin">Ajout voisin</string>
     <string name="supprimer_un_voisin">Supprimer un voisin</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="supprimer_voisin">Voulez-vous supprimer ce voisin ?</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
 </resources>

@@ -5,7 +5,7 @@
     <string name="hint_nom">Name</string>
     <string name="hint_telephone">Phone number</string>
     <string name="hint_website">Website</string>
-    <string name="hint_address">Adress</string>
+    <string name="hint_address">Address</string>
     <string name="hint_moi">About me</string>
     <string name="enregistrer">Save</string>
     <string name="photo_de_profil">Profil picture</string>
@@ -18,4 +18,8 @@
     <string name="entrer_nom">Enter your name</string>
     <string name="ajout_voisin">Add neighbor</string>
     <string name="supprimer_un_voisin">Delete neighbor</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="supprimer_voisin">Do you want to delete this neighbor?</string>
+    <string name="oui">Yes</string>
+    <string name="non">No</string>
 </resources>

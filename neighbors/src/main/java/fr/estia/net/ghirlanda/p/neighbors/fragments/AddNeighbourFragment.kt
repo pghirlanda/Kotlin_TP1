@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.URLUtil
 import android.widget.Button
-import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
 import fr.estia.net.ghirlanda.p.neighbors.NavigationListener
@@ -30,7 +29,6 @@ class AddNeighbourFragment :
     private lateinit var txtWebsite: TextInputEditText
     private lateinit var txtAdress: TextInputEditText
     private lateinit var txtMoi: TextInputEditText
-    private lateinit var toolbar: Toolbar
 
     /*Fonction permettant de définir une vue à attacher à un fragment*/
     override fun onCreateView(
@@ -57,9 +55,7 @@ class AddNeighbourFragment :
         txtAdress.addTextChangedListener(this)
         txtMoi.addTextChangedListener(this)
 
-//        toolbar = view.findViewById(R.id.toolbar)
-//        setSupportActionBar(toolbar)
-//        updateTitle(R.string.toolbar_add)
+        (activity as? NavigationListener)?.updateTitle(R.string.toolbar_add)
 
         return view
     }

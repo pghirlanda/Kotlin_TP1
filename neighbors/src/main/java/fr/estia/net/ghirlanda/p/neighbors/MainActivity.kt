@@ -1,8 +1,8 @@
 package fr.estia.net.ghirlanda.p.neighbors
 
 import android.os.Bundle
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import fr.estia.net.ghirlanda.p.neighbors.fragments.ListNeighborsFragment
 
@@ -13,9 +13,8 @@ class MainActivity : AppCompatActivity(), NavigationListener {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-//        toolbar = findViewById(R.id.toolbar)
-
-//        (activity as AppCompatActivity).setSupportActionBar(toolbar)
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         showFragment(ListNeighborsFragment())
     }
@@ -28,6 +27,6 @@ class MainActivity : AppCompatActivity(), NavigationListener {
     }
 
     override fun updateTitle(title: Int) {
-//        toolbar.setTitle(title)
+        toolbar.setTitle(title)
     }
 }

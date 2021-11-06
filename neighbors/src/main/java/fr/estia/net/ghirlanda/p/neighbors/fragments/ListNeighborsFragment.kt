@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,7 +24,6 @@ class ListNeighborsFragment :
     NavigationListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var btnAdd: FloatingActionButton
-    private lateinit var toolbar: Toolbar
 
     /*Fonction permettant de définir une vue à attacher à un fragment*/
     override fun onCreateView(
@@ -43,9 +41,7 @@ class ListNeighborsFragment :
             )
         )
 
-//        toolbar = view.findViewById(R.id.toolbar)
-//        setSupportActionBar(toolbar)
-//        updateTitle(R.string.toolbar_liste)
+        (activity as? NavigationListener)?.updateTitle(R.string.toolbar_liste)
 
         btnAdd = view.findViewById(R.id.btn_add_neighbor)
         btnAdd.setOnClickListener(this)
@@ -62,16 +58,16 @@ class ListNeighborsFragment :
 
     override fun onDeleteNeibor(neighbor: Neighbor) {
         val builder = AlertDialog.Builder(this.context)
-        builder.setTitle("Confirmation")
-        builder.setMessage("Voulez-vous supprimer ce voisin ?")
+        builder.setTitle(getString(R.string.confirmation))
+        builder.setMessage(getString(R.string.supprimer_voisin))
         builder.setPositiveButton(
-            "Oui"
+            getString(R.string.oui)
         ) { _, _ ->
             NeighborRepository.getInstance().deleteNeighbour(neighbor)
             refreshList()
         }
         builder.setNegativeButton(
-            "Non"
+            getString(R.string.non)
         ) { _, _ -> }
         builder.show()
     }
@@ -90,6 +86,5 @@ class ListNeighborsFragment :
     }
 
     override fun updateTitle(title: Int) {
-//        toolbar.setTitle(title)
     }
 }
